@@ -1,0 +1,8 @@
+version: '2'
+services:
+  web:
+    image: php54-centos7
+    ports:
+      - "8081:80"
+    volumes:
+      - ./docker-volume/www:/var/www
