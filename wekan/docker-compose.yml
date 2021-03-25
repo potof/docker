@@ -1,0 +1,18 @@
+wekan:
+  image: mquandalle/wekan
+  links: 
+    - wekandb
+  environment:
+    - MONGO_URL=mongodb://wekandb/wekan
+    - ROOT_URL=http://127.0.0.1:9999
+  ports:
+    - 9999:8080
+  restart: always
+
+wekandb:
+  image: mongo
+  #volumes:
+    #- /mnt/sda1/docker/wecan/data:/data/db
+    #- /mnt/sda1/docker/wecan/configdb:/data/configdb
+  restart: always
+
